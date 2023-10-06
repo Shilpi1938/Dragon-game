@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 114px;
+    width: 233px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+.gameOver{
+    position: relative;
+    top: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-family:'Varela Round', sans-serif ;
+   
+}
+#scoreGame{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 20px;
+    color: rgb(215, 116, 17);
+    font-family: 'Varela Round', sans-serif;
+}
+.obstacle{
+    background-image: url(dragon.png);
+    width: 100px;
+    height:70px ;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 46vw;
+}
+.animinateDino{
+    animation: dino 0.6s linear;
+}
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: 400px;
+    }
+    100%{
+        bottom: 0;
+    }
+
+}
+.animinateObsticle{
+    animation:animinateObsticle  5s linear infinite;
+}
+@keyframes animinateObsticle{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
